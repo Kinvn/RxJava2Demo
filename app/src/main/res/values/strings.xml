@@ -6,4 +6,8 @@
     <string name="subscribe">Subscribe</string>
     <string name="map">Map</string>
     <string name="zip">Zip</string>
+    <string name="dispose">Dispose</string>
+    <string name="take">Take</string>
+    <string name="timer">Timer</string>
+    <string name="interval">Interval</string>
 </resources>

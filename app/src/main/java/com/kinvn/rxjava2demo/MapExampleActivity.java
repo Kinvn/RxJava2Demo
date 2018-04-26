@@ -1,4 +1,4 @@
-package com.example.slk.rxjavademo;
+package com.kinvn.rxjava2demo;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,6 +7,8 @@ import android.util.Log;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.kinvn.rxjava2demo.R;
 
 import io.reactivex.Observable;
 import io.reactivex.Observer;

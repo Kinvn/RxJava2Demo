@@ -1,4 +1,4 @@
-package com.example.slk.rxjavademo;
+package com.kinvn.rxjava2demo;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,13 +7,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.kinvn.rxjava2demo.R;
+
 import io.reactivex.Observable;
-import io.reactivex.ObservableEmitter;
-import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.BiFunction;
 import io.reactivex.schedulers.Schedulers;
 
 /**

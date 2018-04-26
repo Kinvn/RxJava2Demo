@@ -1,4 +1,4 @@
-package com.example.slk.rxjavademo;
+package com.kinvn.rxjava2demo;
 
 import org.junit.Test;
 
