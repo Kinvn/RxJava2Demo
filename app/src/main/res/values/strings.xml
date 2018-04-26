@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">RxJavaDemo</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="simple">Simple</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="map">Map</string>
+    <string name="zip">Zip</string>
+</resources>
