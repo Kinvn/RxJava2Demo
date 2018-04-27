@@ -24,6 +24,24 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button_take).setOnClickListener(view -> startActivity(TakeExampleActivity.class));
         //TimerExampleActivity
         findViewById(R.id.button_timer).setOnClickListener(view -> startActivity(TimerExampleActivity.class));
+        //IntervalExampleActivity
+        findViewById(R.id.button_interval).setOnClickListener(view -> startActivity(IntervalExampleActivity.class));
+        //SingleExampleActivity
+        findViewById(R.id.button_single).setOnClickListener(view -> startActivity(SingleExampleActivity.class));
+        //CompletableExampleActivity
+        findViewById(R.id.button_completable).setOnClickListener(view -> startActivity(CompletableExampleActivity.class));
+        //FlowableExampleActivity
+        findViewById(R.id.button_flowable).setOnClickListener(view -> startActivity(FlowableExampleActivity.class));
+        //ReduceExampleActivity
+        findViewById(R.id.button_reduce).setOnClickListener(view -> startActivity(ReduceExampleActivity.class));
+        //BufferExampleActivity
+        findViewById(R.id.button_buffer).setOnClickListener(view -> startActivity(BufferExampleActivity.class));
+        //FilterExampleActivity
+        findViewById(R.id.button_filter).setOnClickListener(view -> startActivity(FilterExampleActivity.class));
+        //SkipExampleActivity
+        findViewById(R.id.button_skip).setOnClickListener(view -> startActivity(SkipExampleActivity.class));
+        //ScanExampleActivity
+        findViewById(R.id.button_scan).setOnClickListener(view -> startActivity(ScanExampleActivity.class));
     }
 
     private void startActivity(Class<? extends Activity> clz) {

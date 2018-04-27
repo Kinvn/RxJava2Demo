@@ -9,48 +9,51 @@ import android.widget.Toast;
 
 import com.example.kinvn.rxjava2demo.R;
 
+import java.util.List;
+
 import io.reactivex.Observable;
 import io.reactivex.Observer;
-import io.reactivex.Scheduler;
-import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
-import io.reactivex.schedulers.Schedulers;
 
 /**
- * Created by Kinvn on 2018/4/26.
+ * Created by Kinvn on 2018/4/27.
+ * <p>
+ * Email:kinvn123@gmail.com
  */
 
-public class TakeExampleActivity extends BaseActivity{
-    private static final String TAG = "TakeExampleActivity";
+public class BufferExampleActivity extends BaseActivity {
+    private static final String TAG = "BufferExampleActivity";
     private TextView textView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_take_example);
+        setContentView(R.layout.activity_buffer_example);
         textView = findViewById(R.id.textView);
-        findViewById(R.id.button).setOnClickListener(view -> getObservable()
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .take(3)
-                .subscribe(getObserver()));
+        findViewById(R.id.button).setOnClickListener(view ->
+                Observable.just("A", "B", "C", "D", "E")
+                        .buffer(3, 1)
+                        .subscribe(getObserver()));
     }
 
-    private Observer<String> getObserver() {
-        return new Observer<String>() {
+    private Observer<List<String>> getObserver() {
+        return new Observer<List<String>>() {
             @Override
             public void onSubscribe(Disposable d) {
                 Log.d(TAG, "onSubscribe");
             }
 
             @Override
-            public void onNext(String s) {
-                textView.append(s + "\n");
+            public void onNext(List<String> strings) {
+                textView.append("size:" + strings.size() + "\n");
+                for (String s : strings) {
+                    textView.append(s + "\n");
+                }
             }
 
             @Override
             public void onError(Throwable e) {
-                Log.e(TAG, "onError:" + e.getMessage());
+                Log.e(TAG, "onError: " + e.getMessage() );
             }
 
             @Override
@@ -58,9 +61,5 @@ public class TakeExampleActivity extends BaseActivity{
                 showToast("onComplete");
             }
         };
-    }
-
-    private Observable<String> getObservable() {
-        return Observable.just("1","2", "3", "4", "5");
     }
 }

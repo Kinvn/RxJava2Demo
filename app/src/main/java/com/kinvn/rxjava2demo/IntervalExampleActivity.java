@@ -21,9 +21,9 @@ import io.reactivex.schedulers.Schedulers;
  * Created by Kinvn on 2018/4/27.
  */
 
-public class IntervalExampleActivity extends AppCompatActivity {
+public class IntervalExampleActivity extends BaseActivity {
     private static final String TAG = "IntervalExampleActivity";
-    TextView textView;
+    private TextView textView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -37,20 +37,20 @@ public class IntervalExampleActivity extends AppCompatActivity {
                         .subscribe(getObserver()));
     }
 
-    private Observable getObservable() {
+    private Observable<Long> getObservable() {
         return Observable.interval(0, 2, TimeUnit.SECONDS);
     }
 
-    private Observer getObserver() {
-        return new Observer() {
+    private Observer<Long> getObserver() {
+        return new Observer<Long>() {
             @Override
             public void onSubscribe(Disposable d) {
                 Log.d(TAG, "onSubscribe");
             }
 
             @Override
-            public void onNext(Object o) {
-                textView.setText(o.toString());
+            public void onNext(Long l) {
+                textView.setText(String.valueOf(l));
             }
 
             @Override
@@ -60,7 +60,7 @@ public class IntervalExampleActivity extends AppCompatActivity {
 
             @Override
             public void onComplete() {
-                Toast.makeText(IntervalExampleActivity.this, "onComplete", Toast.LENGTH_SHORT).show();
+                showToast("onComplete");
             }
         };
     }

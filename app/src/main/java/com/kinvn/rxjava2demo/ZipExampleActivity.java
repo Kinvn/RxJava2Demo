@@ -3,6 +3,7 @@ package com.kinvn.rxjava2demo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,7 +22,8 @@ import io.reactivex.schedulers.Schedulers;
  * Email:kinvn123@gmail.com
  */
 
-public class ZipExampleActivity extends AppCompatActivity {
+public class ZipExampleActivity extends BaseActivity {
+    private static final String TAG = "ZipExampleActivity";
     private EditText editText1, editText2;
     private TextView textView;
 
@@ -65,7 +67,7 @@ public class ZipExampleActivity extends AppCompatActivity {
         return new Observer<String>() {
             @Override
             public void onSubscribe(Disposable d) {
-
+                Log.d(TAG, "onSubscribe");
             }
 
             @Override
@@ -75,12 +77,12 @@ public class ZipExampleActivity extends AppCompatActivity {
 
             @Override
             public void onError(Throwable e) {
-
+                Log.e(TAG, "onError: " + e.getMessage() );
             }
 
             @Override
             public void onComplete() {
-                Toast.makeText(ZipExampleActivity.this, "Completed!", Toast.LENGTH_SHORT).show();
+                showToast("onComplete");
             }
         };
     }

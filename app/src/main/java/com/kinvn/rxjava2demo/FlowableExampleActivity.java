@@ -9,58 +9,52 @@ import android.widget.Toast;
 
 import com.example.kinvn.rxjava2demo.R;
 
-import io.reactivex.Observable;
+import io.reactivex.Flowable;
 import io.reactivex.Observer;
-import io.reactivex.Scheduler;
+import io.reactivex.SingleObserver;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.BiFunction;
 import io.reactivex.schedulers.Schedulers;
 
 /**
- * Created by Kinvn on 2018/4/26.
+ * Created by Kinvn on 2018/4/27.
+ * <p>
+ * Email:kinvn123@gmail.com
  */
 
-public class TakeExampleActivity extends BaseActivity{
-    private static final String TAG = "TakeExampleActivity";
+public class FlowableExampleActivity extends BaseActivity{
+    private static final String TAG = "FlowableExampleActivity";
     private TextView textView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_take_example);
+        setContentView(R.layout.activity_flowable_example);
         textView = findViewById(R.id.textView);
-        findViewById(R.id.button).setOnClickListener(view -> getObservable()
+        findViewById(R.id.button).setOnClickListener(view -> Flowable.just(1,2,3,4)
+                .reduce(50, (integer, integer2) -> integer + integer2)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .take(3)
                 .subscribe(getObserver()));
     }
 
-    private Observer<String> getObserver() {
-        return new Observer<String>() {
+    private SingleObserver<Integer> getObserver() {
+        return new SingleObserver<Integer>() {
             @Override
             public void onSubscribe(Disposable d) {
                 Log.d(TAG, "onSubscribe");
             }
 
             @Override
-            public void onNext(String s) {
-                textView.append(s + "\n");
+            public void onSuccess(Integer integer) {
+                textView.setText("" + integer);
             }
 
             @Override
             public void onError(Throwable e) {
-                Log.e(TAG, "onError:" + e.getMessage());
-            }
-
-            @Override
-            public void onComplete() {
-                showToast("onComplete");
+                Log.e(TAG, "onError: " + e.getMessage() );
             }
         };
-    }
-
-    private Observable<String> getObservable() {
-        return Observable.just("1","2", "3", "4", "5");
     }
 }

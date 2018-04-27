@@ -22,7 +22,7 @@ import io.reactivex.schedulers.Schedulers;
  * Email:kinvn123@gmail.com
  */
 
-public class MapExampleActivity extends AppCompatActivity {
+public class MapExampleActivity extends BaseActivity {
     private static final String TAG = "MapExampleActivity";
     private EditText editText;
     private TextView textView;
@@ -65,7 +65,7 @@ public class MapExampleActivity extends AppCompatActivity {
 
             @Override
             public void onComplete() {
-                Toast.makeText(MapExampleActivity.this, "Completed!", Toast.LENGTH_SHORT).show();
+                showToast("onComplete");
             }
         };
     }

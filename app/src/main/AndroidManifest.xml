@@ -26,6 +26,14 @@
         <activity android:name="com.kinvn.rxjava2demo.TakeExampleActivity" />
         <activity android:name="com.kinvn.rxjava2demo.TimerExampleActivity" />
         <activity android:name="com.kinvn.rxjava2demo.IntervalExampleActivity" />
+        <activity android:name="com.kinvn.rxjava2demo.SingleExampleActivity" />
+        <activity android:name="com.kinvn.rxjava2demo.CompletableExampleActivity" />
+        <activity android:name="com.kinvn.rxjava2demo.FlowableExampleActivity" />
+        <activity android:name="com.kinvn.rxjava2demo.ReduceExampleActivity" />
+        <activity android:name="com.kinvn.rxjava2demo.BufferExampleActivity" />
+        <activity android:name="com.kinvn.rxjava2demo.FilterExampleActivity" />
+        <activity android:name="com.kinvn.rxjava2demo.SkipExampleActivity" />
+        <activity android:name="com.kinvn.rxjava2demo.ScanExampleActivity" />
     </application>
 
 </manifest>

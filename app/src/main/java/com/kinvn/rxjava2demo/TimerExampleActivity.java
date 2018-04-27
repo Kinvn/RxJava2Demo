@@ -23,9 +23,9 @@ import io.reactivex.schedulers.Schedulers;
  * Created by Kinvn on 2018/4/27.
  */
 
-public class TimerExampleActivity extends AppCompatActivity {
+public class TimerExampleActivity extends BaseActivity{
     private static final String TAG = "TimerExampleActivity";
-    TextView textView;
+    private TextView textView;
 
 
     @Override
@@ -60,12 +60,12 @@ public class TimerExampleActivity extends AppCompatActivity {
 
             @Override
             public void onError(Throwable e) {
-
+                Log.e(TAG, "onError: " + e.getMessage() );
             }
 
             @Override
             public void onComplete() {
-                Log.d(TAG, "onComplete");
+                showToast("onComplete");
             }
         };
     }

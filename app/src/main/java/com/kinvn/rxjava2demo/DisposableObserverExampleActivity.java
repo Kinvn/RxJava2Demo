@@ -22,8 +22,8 @@ import io.reactivex.schedulers.Schedulers;
  * Email:kinvn123@gmail.com
  */
 
-public class DisposableObserverExampleActivity extends AppCompatActivity {
-    private static final String TAG = "DisposableObserverExampleActivity";
+public class DisposableObserverExampleActivity extends BaseActivity {
+    private static final String TAG = "DisposableObserver";
     private CompositeDisposable disposables = new CompositeDisposable();
 
     @Override
@@ -48,7 +48,7 @@ public class DisposableObserverExampleActivity extends AppCompatActivity {
 
                             @Override
                             public void onComplete() {
-                                Toast.makeText(DisposableObserverExampleActivity.this, "Completed!", Toast.LENGTH_SHORT).show();
+                                showToast("onComplete");
                             }
                         })));
     }
