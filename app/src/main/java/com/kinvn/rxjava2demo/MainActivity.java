@@ -42,6 +42,14 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button_skip).setOnClickListener(view -> startActivity(SkipExampleActivity.class));
         //ScanExampleActivity
         findViewById(R.id.button_scan).setOnClickListener(view -> startActivity(ScanExampleActivity.class));
+        //ReplayExampleActivity
+        findViewById(R.id.button_replay).setOnClickListener(view -> startActivity(ReplayExampleActivity.class));
+        //ContactExampleActivity
+        findViewById(R.id.button_contact).setOnClickListener(view -> startActivity(ContactExampleActivity.class));
+        //MergeExampleActivity
+        findViewById(R.id.button_merge).setOnClickListener(view -> startActivity(MergeExampleActivity.class));
+        //DeferExampleActivity
+        findViewById(R.id.button_defer).setOnClickListener(view -> startActivity(DeferExampleActivity.class));
     }
 
     private void startActivity(Class<? extends Activity> clz) {

@@ -34,6 +34,10 @@
         <activity android:name="com.kinvn.rxjava2demo.FilterExampleActivity" />
         <activity android:name="com.kinvn.rxjava2demo.SkipExampleActivity" />
         <activity android:name="com.kinvn.rxjava2demo.ScanExampleActivity" />
+        <activity android:name="com.kinvn.rxjava2demo.ReplayExampleActivity" />
+        <activity android:name="com.kinvn.rxjava2demo.ContactExampleActivity" />
+        <activity android:name="com.kinvn.rxjava2demo.MergeExampleActivity" />
+        <activity android:name="com.kinvn.rxjava2demo.DeferExampleActivity" />
     </application>
 
 </manifest>
