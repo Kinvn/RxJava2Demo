@@ -38,6 +38,11 @@
         <activity android:name="com.kinvn.rxjava2demo.ContactExampleActivity" />
         <activity android:name="com.kinvn.rxjava2demo.MergeExampleActivity" />
         <activity android:name="com.kinvn.rxjava2demo.DeferExampleActivity" />
+        <activity android:name="com.kinvn.rxjava2demo.DistinctExampleActivity" />
+        <activity android:name="com.kinvn.rxjava2demo.LastOperatorActivity" />
+        <activity android:name="com.kinvn.rxjava2demo.ReplaySubjectActivity" />
+        <activity android:name="com.kinvn.rxjava2demo.PublishSubjectActivity" />
+        <activity android:name="com.kinvn.rxjava2demo.BehaviorSubjectActivity" />
     </application>
 
 </manifest>

@@ -22,4 +22,9 @@
     <string name="contact">Contact</string>
     <string name="merge">Merge</string>
     <string name="defer">Defer</string>
+    <string name="distinct">Distinct</string>
+    <string name="last">Last</string>
+    <string name="replay_subject">ReplaySubject</string>
+    <string name="publish_subject">PublishSubject</string>
+    <string name="behavior_subject">BehaviorSubject</string>
 </resources>

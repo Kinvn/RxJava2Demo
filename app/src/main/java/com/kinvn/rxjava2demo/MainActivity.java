@@ -50,6 +50,16 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button_merge).setOnClickListener(view -> startActivity(MergeExampleActivity.class));
         //DeferExampleActivity
         findViewById(R.id.button_defer).setOnClickListener(view -> startActivity(DeferExampleActivity.class));
+        //DistinctExampleActivity
+        findViewById(R.id.button_distinct).setOnClickListener(view -> startActivity(DistinctExampleActivity.class));
+        //LastOperatorExampleActivity
+        findViewById(R.id.button_last).setOnClickListener(view -> startActivity(LastOperatorActivity.class));
+        //ReplaySubjectExampleActivity
+        findViewById(R.id.button_replay_subject).setOnClickListener(view -> startActivity(ReplaySubjectActivity.class));
+        //PublishSubjectExampleActivity
+        findViewById(R.id.button_publish_subject).setOnClickListener(view -> startActivity(PublishSubjectActivity.class));
+        //BehaviorSubjectExampleActivity
+        findViewById(R.id.button_behavior_subject).setOnClickListener(view -> startActivity(BehaviorSubjectActivity.class));
     }
 
     private void startActivity(Class<? extends Activity> clz) {
