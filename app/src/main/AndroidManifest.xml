@@ -43,6 +43,8 @@
         <activity android:name="com.kinvn.rxjava2demo.ReplaySubjectActivity" />
         <activity android:name="com.kinvn.rxjava2demo.PublishSubjectActivity" />
         <activity android:name="com.kinvn.rxjava2demo.BehaviorSubjectActivity" />
+        <activity android:name="com.kinvn.rxjava2demo.AsyncSubjectActivity" />
+        <activity android:name="com.kinvn.rxjava2demo.ThrottleFirstActivity" />
     </application>
 
 </manifest>

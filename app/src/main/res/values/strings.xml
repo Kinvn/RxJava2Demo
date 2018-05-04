@@ -27,4 +27,6 @@
     <string name="replay_subject">ReplaySubject</string>
     <string name="publish_subject">PublishSubject</string>
     <string name="behavior_subject">BehaviorSubject</string>
+    <string name="async_subject">AsyncSubject</string>
+    <string name="throttle_first">ThrottleFirst</string>
 </resources>

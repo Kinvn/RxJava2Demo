@@ -60,6 +60,10 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button_publish_subject).setOnClickListener(view -> startActivity(PublishSubjectActivity.class));
         //BehaviorSubjectExampleActivity
         findViewById(R.id.button_behavior_subject).setOnClickListener(view -> startActivity(BehaviorSubjectActivity.class));
+        //AsyncSubjectExampleActivity
+        findViewById(R.id.button_async_subject).setOnClickListener(view -> startActivity(AsyncSubjectActivity.class));
+        //ThrottleFirstExampleActivity
+        findViewById(R.id.button_throttle_first).setOnClickListener(view -> startActivity(ThrottleFirstActivity.class));
     }
 
     private void startActivity(Class<? extends Activity> clz) {
