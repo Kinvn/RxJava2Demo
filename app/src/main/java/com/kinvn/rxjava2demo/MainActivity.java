@@ -1,13 +1,15 @@
 package com.kinvn.rxjava2demo;
 
 import android.app.Activity;
+import android.app.Application;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.kinvn.rxjava2demo.R;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,6 +66,12 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button_async_subject).setOnClickListener(view -> startActivity(AsyncSubjectActivity.class));
         //ThrottleFirstExampleActivity
         findViewById(R.id.button_throttle_first).setOnClickListener(view -> startActivity(ThrottleFirstActivity.class));
+        //ThrottleLastExampleActivity
+        findViewById(R.id.button_throttle_last).setOnClickListener(view -> startActivity(ThrottleLastActivity.class));
+        //DebounceExampleActivity
+        findViewById(R.id.button_debounce).setOnClickListener(view -> startActivity(DebounceExampleActivity.class));
+        //WindowExampleActivity
+        findViewById(R.id.button_window).setOnClickListener(view -> startActivity(WindowExampleActivity.class));
     }
 
     private void startActivity(Class<? extends Activity> clz) {

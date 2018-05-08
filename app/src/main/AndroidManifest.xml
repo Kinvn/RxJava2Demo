@@ -11,8 +11,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name="com.kinvn.rxjava2demo.MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -45,6 +44,9 @@
         <activity android:name="com.kinvn.rxjava2demo.BehaviorSubjectActivity" />
         <activity android:name="com.kinvn.rxjava2demo.AsyncSubjectActivity" />
         <activity android:name="com.kinvn.rxjava2demo.ThrottleFirstActivity" />
+        <activity android:name="com.kinvn.rxjava2demo.ThrottleLastActivity" />
+        <activity android:name="com.kinvn.rxjava2demo.DebounceExampleActivity" />
+        <activity android:name="com.kinvn.rxjava2demo.WindowExampleActivity" />
     </application>
 
 </manifest>
